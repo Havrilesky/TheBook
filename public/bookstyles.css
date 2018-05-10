@@ -1,0 +1,137 @@
+bookstyles.css
+
+body {
+	font-size: 1rem;
+	font-family: 'Quicksand', sans-serif;
+  color: #662e1c;
+  background-color: #ebdcb2;
+}
+
+.control {
+    font-family: 'Quicksand', sans-serif;
+    background-color: lightgrey;
+    margin:.2rem;
+}
+
+.inField {
+      background-color: #fff;
+}
+
+h3 {
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.controlName {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 1rem;
+  display:inline-block;
+}
+
+.listContainer {
+  margin: .5rem;
+  width: 100%;
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-bottom:1px dashed #aaa;
+  min-height: 8.5rem;
+  margin-top:.5rem;
+  padding:.5rem;
+}
+
+.controlArea {
+  background-color: none;
+  width: 8rem;
+}
+
+.writingControl {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.daytime {
+  background-color: #d0e1f9;
+  color: #000;
+}
+
+.twilight {
+  background-color: #4d648d;
+  color: #fff;
+}
+
+.night {
+  background-color: #283655;
+  color: #fff;
+}
+
+.writingArea *{
+  background-color: none;
+}
+
+.entryText{
+  background-color: #fff;
+  min-height: 8rem;
+  min-width: 20rem;
+
+}
+
+.Moonrise {
+  font-family: 'Quicksand', sans-serif;
+  background-color: none;
+  font-style: italic;
+  font-size: .7rem;
+  margin:.3rem;
+}
+
+.Moonset {
+  font-family: 'Quicksand', sans-serif;
+  background-color: none;
+  font-style: italic;
+  font-size: .7rem;
+  margin:.3rem;
+
+}
+
+.Sunrise {
+  font-family: 'Quicksand', sans-serif;
+  background-color: none;
+  font-style: italic;
+  font-size: .7rem;
+  margin:.3rem;
+
+}
+
+.Sunset {
+  font-family: 'Quicksand', sans-serif;
+  background-color: none;
+  font-style: italic;
+  font-size: .7rem;
+  margin:.3rem;
+
+}
+
+#controlTemplate {
+  display:none;
+  position:relative;
+}
+
+#textTemplate {
+  display:none;
+  position:relative;
+}
+#writingItemTemplate {
+  display:none;
+  position:relative;
+}
+
+#addEntry {
+  position: relative;
+  right:    0;
+  bottom:   0;
+}
+
+#changeDate {
+  display:none;
+}

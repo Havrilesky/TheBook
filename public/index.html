@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Book</title>
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="/bookstyles.css">
+</head>
+<body>
+<h3 id="theDate">date goes here</h3>
+<div class="controlName">Go to Date:</div><input class="control inField" type="date" name="thedate" value="2025-04-01" id="goDate" ><button class= "control" onclick="goToDate(new Date(document.getElementById('goDate').value))"">Go</button><br>
+<button class= "control" onclick="newForDate(lastDate)">Create New Entry</button><br>
+<button class= "control" onclick="goToDate(new Date(lastDate.getTime() - oneDay))">Prev Day</button>
+<button class= "control" onclick="goToDate(new Date(lastDate.getTime() + oneDay))">Next Day</button>
+<br>
+<div class="controlName">Weather:</div>	
+<select class="weatherControl control" id="temperature" oninput="updateWeather('Temperature', this.value)"">
+	<option value="Sweltering">Sweltering</option>
+	<option value="Hot">Hot</option>
+	<option value="Warm">Warm</option>
+	<option value="Comfortable">Comfortable</option>
+	<option value="Cool">Cool</option>
+	<option value="Chilly">Chilly</option>
+	<option value="Cold">Cold</option>
+	<option value="Feezing">Feezing</option>
+	<option value="Frigid">Frigid</option>
+</select>
+<select class="weatherControl control" id="weather" oninput="updateWeather('Weather', this.value)"">
+	<option value="Clear">Clear</option>
+	<option value="Scattered Clouds">Scattered Clouds</option>
+	<option value="Partly Cloudy">Partly Cloudy</option>
+	<option value="Mostly Cloudy">Mostly Cloudy</option>
+	<option value="Cloudy">Cloudy</option>
+	<option value="Overcast">Overcast</option>
+	<option value="Showers">Showers</option>
+	<option value="Rain">Rain</option>
+	<option value="Thunderstorms">Thunderstorms</option>
+	<option value="Snow Flurries">Snow Flurries</option>
+	<option value="Snow">Snow</option>
+	<option value="Sleet">Sleet</option>
+</select>
+
+<div class="listContainer" value="writingArea" id="writingList">
+</div>
+
+
+
+<div class="flexContainer" value="writingItem" id="writingItemTemplate">
+	<div class="controlArea" value="controlArea" id="controlTemplate">
+		<select class="writingControl daytime" id="timeSelect" oninput="update(this.parentNode.parentNode.id, 'Time', this.value)"">>
+		</select>
+		<br>
+		<select class="writingControl daytime" id="authorSelect" oninput="update(this.parentNode.parentNode.id, 'Author', this.value)"">>
+		</select>
+		<br>
+		<select class="writingControl daytime" id="locationSelect" oninput="update(this.parentNode.parentNode.id, 'Location', this.value)"">>
+		</select>
+		<div class="Moonrise">
+			 
+		</div>
+		<div class="Moonset">
+			 
+		</div>
+		<div class="Sunrise">
+			 
+		</div>
+		<div class="Sunset">
+			 
+		</div>
+		<button id = "addWriting" class="writingControl daytime" onclick="newWriting(this)">+</button>
+	</div>	
+	<div class="writingArea" value="textArea" id="textTemplate">
+		<div  contenteditable=true class= "entryText" oninput="update(this.parentNode.parentNode.id, 'WritingContent', this.innerHTML, this)"">
+		test text 
+		</div>
+	</div>
+</div>
+
+<script src="thebook.js" type="text/javascript"></script>
+
+</body>
+</html>
